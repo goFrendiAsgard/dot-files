@@ -20,6 +20,7 @@ let g:spacevim_custom_plugins = [
     \ ['mattn/calendar-vim'],
     \ ['vim-scripts/SyntaxRange'],
     \ ['jceb/vim-orgmode'],
+    \ ['ervandew/supertab'],
     \ ]
 
 " custom mappings:
@@ -34,6 +35,7 @@ set shiftwidth=4
 set expandtab
 
 "line number
+"set relativenumber!
 set number
 "set mouse=a
 set autoindent
@@ -46,3 +48,14 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" disable jk (jk is used as replacement of <esc>, but since I've swap <esc>
+" with caps lock, there is no need to do so
+inoremap jk jk
+" to disable key binding, do this: inoremap jk <Nop>
+
+" from http://eduncan911.com/software/fix-slow-scrolling-in-vim-and-neovim.html
+set cursorline!
+set lazyredraw
+set synmaxcol=128
+syntax sync minlines=256
