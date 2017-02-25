@@ -10,4 +10,4 @@ I use several applications here:
 * w3m
 * sc
 
-And I add this on startup: `gnome-terminal --windows --maximize -e ~/.start-tmux.sh`
+And I add this on startup: `gnome-terminal --maximize -e ~/.start-tmux.sh`
