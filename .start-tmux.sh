@@ -1,29 +1,22 @@
 #!/bin/sh
-# https://robots.thoughtbot.com/a-tmux-crash-course
+# https://robots.thoughtbot.com/a-tmux-next-crash-course
 session="work"
 
-tmux start-server
+tmux-next start-server
 
-tmux new-session -d -s $session -n vim
+## WORKSPACE
+tmux-next new-window -t $session:1 -n workspace
+tmux-next select-window -t $session:1
+tmux-next select-pane -t 1
+tmux-next send-keys "nvim" C-m
 
-tmux select-pane -t 1
-#tmux send-keys "vim" C-m
+tmux-next select-pane -t 1
 
-tmux splitw -h -p 30
-tmux send-keys "fortune | cowsay -f moose && python time-wizard/time-wizard.py pomodoro" C-m
+## SECOND WORKSPACE
+tmux-next new-window -t $session:2 -n second-workspace
 
-tmux select-pane -t 2
-tmux splitw -v -p 50
+tmux-next select-window -t $session:1
 
-tmux select-pane -t 3
-tmux send-keys "python time-wizard/time-wizard.py kanban mode:mini" C-m
+tmux-next select-pane -D
 
-tmux select-pane -t 1
-
-tmux new-window -t $session:1 -n scratch
-
-tmux select-window -t $session:0
-
-tmux select-pane -D
-
-tmux attach-session -t $session
+tmux-next attach-session -t $session
