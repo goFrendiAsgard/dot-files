@@ -1,6 +1,6 @@
 " set the options of SpaceVim
 let g:spacevim_colorscheme = 'gruvbox'
-let g:org_agenda_files = ['~/org/*.org']
+let g:org_agenda_files = ['~/Dropbox/org/*.org']
 let g:org_heading_shade_leading_stars = 1
 let g:org_indent = 1
 
@@ -20,7 +20,6 @@ let g:spacevim_custom_plugins = [
     \ ['mattn/calendar-vim'],
     \ ['vim-scripts/SyntaxRange'],
     \ ['jceb/vim-orgmode'],
-    \ ['ervandew/supertab'],
     \ ]
 
 " custom mappings:
@@ -37,7 +36,7 @@ set expandtab
 "line number
 "set relativenumber!
 set number
-"set mouse=a
+set mouse=a
 set autoindent
 set wildmenu
 set clipboard=unnamedplus
