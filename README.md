@@ -5,7 +5,7 @@ I use several applications here:
 
 * gnome-terminal
 * tmux
-* neovim + spacevim
+* neovim
 * cmus
 * w3m
 * sc

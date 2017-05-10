@@ -1,1 +1,0 @@
-/home/gofrendi/.SpaceVim.d

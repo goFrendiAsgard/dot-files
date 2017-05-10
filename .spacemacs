@@ -32,6 +32,8 @@ values."
    dotspacemacs-configuration-layers
    '(
      ;; ADDED BY GOFRENDI, to enable languages I usually used
+     nginx
+     yaml
      javascript
      html
      php
@@ -63,9 +65,9 @@ values."
      git
      markdown
      org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
@@ -365,13 +367,13 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (defvar zenburn-override-colors-alist
     '(
       ("zenburn-bg-2"     . "#000000")
-      ("zenburn-bg-1"     . "#1B1B1B")
-      ("zenburn-bg-05"    . "#282828")
-      ("zenburn-bg"       . "#2F2F2F")
-      ("zenburn-bg+05"    . "#393939")
-      ("zenburn-bg+1"     . "#3F3F3F")
-      ("zenburn-bg+2"     . "#4F4F4F")
-      ("zenburn-bg+3"     . "#5F5F5F")
+      ("zenburn-bg-1"     . "#0B0B0B")
+      ("zenburn-bg-05"    . "#181818")
+      ("zenburn-bg"       . "#1F1F1F")
+      ("zenburn-bg+05"    . "#292929")
+      ("zenburn-bg+1"     . "#2F2F2F")
+      ("zenburn-bg+2"     . "#3F3F3F")
+      ("zenburn-bg+3"     . "#4F4F4F")
       ))
     )
 
@@ -385,7 +387,7 @@ you should place your code here."
   ;; ADDED BY GOFRENDI, to make font-color works
   (global-font-lock-mode 1)
   ;; ADDED BY GOFRENDI, use bin/sh shell by default
-  (setq shell-file-name "/bin/sh")
+  (setq shell-file-name "/bin/bash")
   ;; ADDED BY GOFRENDI, to open file in utf8
   (prefer-coding-system 'utf-8)
   (setq coding-system-for-read 'utf-8)
@@ -408,7 +410,7 @@ you should place your code here."
      ))
   ;; ADDED BY GOFRENDI, call agenda view at first
   ;;(add-hook 'after-config-hook 'org-agenda-list)
-  (org-agenda-list)
+  ;;(org-agenda-list)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -425,8 +427,10 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (zonokai-theme zenburn-theme zen-and-art-theme yapfify ws-butler wolfram-mode winum which-key web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org thrift tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stan-mode sql-indent spaceline powerline spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smeargle slim-mode seti-theme scss-mode scad-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reverse-theme restart-emacs rbenv rake rainbow-delimiters railscasts-theme qml-mode pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode professional-theme popwin planet-theme pip-requirements phpunit phpcbf php-extras php-auto-yasnippets phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pastels-on-dark-theme paradox spinner orgit organic-green-theme org-projectile org-present org-pomodoro alert log4e gntp org-plus-contrib org-download org-bullets open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme niflheim-theme neotree naquadah-theme mustang-theme move-text monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minitest minimal-theme matlab-mode material-theme markdown-toc markdown-mode majapahit-theme magit-gitflow madhat2r-theme macrostep lush-theme lorem-ipsum livid-mode skewer-mode simple-httpd live-py-mode linum-relative link-hint light-soap-theme less-css-mode julia-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc jbeans-theme jazz-theme ir-black-theme intero flycheck inkpot-theme info+ indent-guide hydra hy-mode hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-pydoc helm-purpose window-purpose imenu-list helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-hoogle helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag hc-zenburn-theme haskell-snippets haml-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md gandalf-theme fuzzy flx-ido flx flatui-theme flatland-theme firebelly-theme fill-column-indicator farmhouse-theme fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit magit magit-popup git-commit with-editor evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight espresso-theme emmet-mode elisp-slime-nav dumb-jump drupal-mode php-mode dracula-theme django-theme disaster diminish define-word darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme dactyl-mode cython-mode cyberpunk-theme csv-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-ghci company-ghc ghc haskell-mode company-emacs-eclim eclim company-cabal company-c-headers company-auctex company-anaconda company column-enforce-mode color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode cmm-mode cmake-mode clues-theme clean-aindent-mode clang-format chruby cherry-blossom-theme busybee-theme bundler inf-ruby bubbleberry-theme birds-of-paradise-plus-theme bind-map bind-key badwolf-theme auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed auctex-latexmk auctex arduino-mode apropospriate-theme anti-zenburn-theme anaconda-mode pythonic f dash s ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup)))
- '(spacemacs-theme-custom-colors (quote ((red . "#ff5555")))))
+    (xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help nginx-mode php-extras livid-mode skewer-mode js2-refactor multiple-cursors intero orgit magit-gitflow evil-magit magit org-present php-auto-yasnippets evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-mc evil-matchit magit-popup git-commit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu drupal-mode company-web company-ghci company-ghc ghc company-emacs-eclim helm-company helm-c-yasnippet haskell-snippets web-completion-data company-tern dash-functional company-statistics eclim company-cabal company-c-headers company-auctex company-anaconda auto-yasnippet auctex-latexmk zonokai-theme zenburn-theme zen-and-art-theme yapfify yaml-mode ws-butler wolfram-mode winum which-key web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toc-org thrift tern tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stan-mode sql-indent powerline spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smeargle smartparens slim-mode seti-theme scss-mode scad-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reverse-theme restart-emacs rbenv rake rainbow-delimiters railscasts-theme qml-mode pyvenv pytest pyenv-mode py-isort purple-haze-theme pug-mode professional-theme popwin planet-theme pip-requirements phpunit phpcbf phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pastels-on-dark-theme spinner organic-green-theme org-projectile org-pomodoro alert log4e gntp org-plus-contrib org-download org-bullets open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme niflheim-theme neotree naquadah-theme mustang-theme move-text monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minitest minimal-theme matlab-mode material-theme markdown-toc markdown-mode majapahit-theme madhat2r-theme macrostep lush-theme lorem-ipsum simple-httpd live-py-mode linum-relative link-hint light-soap-theme less-css-mode julia-mode json-mode json-snatcher json-reformat js2-mode js-doc jbeans-theme jazz-theme ir-black-theme flycheck inkpot-theme info+ indent-guide hydra hy-mode hungry-delete htmlize hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-pydoc window-purpose imenu-list helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-hoogle helm-gitignore request helm-flx helm-descbinds helm-css-scss helm-ag hc-zenburn-theme haml-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md gandalf-theme fuzzy flx-ido flx flatui-theme flatland-theme firebelly-theme fill-column-indicator farmhouse-theme fancy-battery eyebrowse expand-region exec-path-from-shell evil-unimpaired evil-search-highlight-persist evil-numbers evil-nerd-commenter with-editor evil goto-chg undo-tree eval-sexp-fu highlight espresso-theme emmet-mode elisp-slime-nav dumb-jump php-mode dracula-theme django-theme disaster diminish define-word darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme dactyl-mode cython-mode cyberpunk-theme csv-mode haskell-mode company column-enforce-mode color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode cmm-mode cmake-mode clues-theme clean-aindent-mode clang-format chruby cherry-blossom-theme busybee-theme bundler inf-ruby bubbleberry-theme birds-of-paradise-plus-theme bind-map bind-key badwolf-theme yasnippet auto-highlight-symbol auto-compile packed auctex arduino-mode apropospriate-theme anti-zenburn-theme anaconda-mode pythonic f dash s ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup)))
+ '(spacemacs-theme-custom-colors (quote ((red . "#ff5555"))))
+ '(spacemacs-theme-org-agenda-height nil)
+ '(spacemacs-theme-org-height nil t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
