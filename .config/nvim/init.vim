@@ -62,12 +62,21 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
+set omnifunc=syntaxcomplete#Complete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " If you want to install not installed plugins on startup.
 "if dein#check_install()
 "  call dein#install()
 "endif
 "
+set foldmethod=indent   
+set foldnestmax=10
+set nofoldenable
+
+" Supertab work with omnicompletion
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:JavaComplete_GradleExecutable = 'gradle'
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
@@ -76,6 +85,9 @@ let g:deoplete#enable_at_startup = 1
 let g:org_agenda_files = ['~/Dropbox/org/*.org']
 let g:org_heading_shade_leading_stars = 1
 let g:org_indent = 1
+
+" NERD Tree
+let g:NERDTreeShowHidden=1
 
 "custom behaviour
 set tabstop=4
