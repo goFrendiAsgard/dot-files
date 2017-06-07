@@ -62,6 +62,11 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
+
+" Local Leader:
+let maplocalleader = "\\"
+
+" Java Complete
 set omnifunc=syntaxcomplete#Complete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
@@ -72,7 +77,7 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 "
 set foldmethod=indent   
 set foldnestmax=10
-set nofoldenable
+"set nofoldenable
 
 " Supertab work with omnicompletion
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
