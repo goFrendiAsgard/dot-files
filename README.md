@@ -14,7 +14,10 @@ I mainly rely on these wondeful applications:
 * `ctrl+h`, `ctrl+j`, `ctrl+k`, `ctrl+l` works consistently in tmux and vim windows
 * `s` in vim/neovim will not open context window
 * `w` will open context window
-* linewrap works perfectly.
+* linewrap works perfectly
+* clipboard works correctly
+* use `standard` instead of `eslint`
+* Battery and time indicator on tmux's status bar
 
 # Getting started
 
