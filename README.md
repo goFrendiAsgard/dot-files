@@ -30,7 +30,7 @@ sudo apt-get install tmux
 ## Install gogh
 
 ```
-wget -O xt  http://git.io/v3D4o && chmod +x xt && ./xt && rm xt
+wget -O xt  http://git.io/vGz67 && chmod +x xt && ./xt && rm xt
 ```
 
 * Choose `gruvbox` & `gruvbox dark`.
@@ -108,6 +108,7 @@ Or no. Actually you only need to add `set -o vi` at the of your `~/.bashrc`
 # Bonus: Interesting sofwares
 
 * sc : spreadsheet
-* cmus : music player
+* cmus : music player (with playlist)
 * w3m : web browser
+* youtube-dl : youtube downloader
 
