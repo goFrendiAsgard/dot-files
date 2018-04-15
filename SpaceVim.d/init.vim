@@ -42,7 +42,7 @@ set foldnestmax=10
 set nofoldenable
 
 " Don't alter s
-let g:spacevim_windows_leader = 'w'
+let g:spacevim_windows_leader = '?'
 let g:spacevim_windows_smartclose = 'q'
 
 " Use nerdtree
@@ -54,6 +54,7 @@ let g:NERDTreeShowHidden = 1
 " Use ale
 let g:spacevim_enable_neomake = 0
 let g:spacevim_enable_ale = 1
+
 " Enable linting on the fly
 let g:spacevim_lint_on_the_fly = 1
 
