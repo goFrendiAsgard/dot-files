@@ -30,6 +30,10 @@ let g:spacevim_enable_statusline_display_mode = 1
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 
+" Define clang for Clamp
+" let g:clamp_libclang_file = '/usr/lib/x86_64-linux-gnu/libclang-6.0.so.1'
+let g:clamp_autostart = 0
+
 " Enable system clipboard
 set clipboard=unnamedplus
 
