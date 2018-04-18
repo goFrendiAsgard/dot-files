@@ -26,6 +26,10 @@ let g:spacevim_enable_tabline_filetype_icon = 0
 " Disable mode in statusline
 let g:spacevim_enable_statusline_display_mode = 1
 
+" Define python host
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
+
 " Enable system clipboard
 set clipboard=unnamedplus
 

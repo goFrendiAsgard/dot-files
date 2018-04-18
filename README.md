@@ -141,6 +141,7 @@ sudo npm install -g sqlite
 sudo npm install -g eslint
 sudo npm install -g standard
 sudo npm install -g neovim
+sudo npm install -g import-js
 sudo npm install -g vscode-html-languageserver-bin
 sudo npm install -g remark
 sudo npm install -g remark-cli
