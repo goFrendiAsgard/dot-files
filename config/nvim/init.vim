@@ -8,20 +8,21 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/gofrendi/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('/home/gofrendi/.cache/dein')
-    call dein#begin('/home/gofrendi/.cache/dein')
+if dein#load_state('~/.cache/dein')
+    call dein#begin('~/.cache/dein')
 
     " Let dein manage dein
     " Required:
-    call dein#add('/home/gofrendi/.cache/dein/repos/github.com/Shougo/dein.vim')
+    call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
     " Add or remove your plugins here:
-    "call dein#add('Shougo/neosnippet.vim')
-    "call dein#add('Shougo/neosnippet-snippets')
+    call dein#add('Shougo/neosnippet.vim')
+    call dein#add('Shougo/neosnippet-snippets')
     call dein#add('scrooloose/nerdtree')
+    call dein#add('scrooloose/nerdcommenter')
     call dein#add('christoomey/vim-tmux-navigator')
     call dein#add('ctrlpvim/ctrlp.vim')
     call dein#add('vim-airline/vim-airline')
@@ -29,8 +30,15 @@ if dein#load_state('/home/gofrendi/.cache/dein')
     call dein#add('morhetz/gruvbox')
     call dein#add('w0rp/ale')
     call dein#add('Shougo/deoplete.nvim')
+    call dein#add('Shougo/denite.nvim')
     call dein#add('Yggdroot/indentLine')
     call dein#add('jistr/vim-nerdtree-tabs')
+    call dein#add('Townk/vim-autoclose')
+    call dein#add('ervandew/supertab')
+    call dein#add('vim-airline/vim-airline-themes')
+    call dein#add('airblade/vim-gitgutter')
+    call dein#add('Xuyuanp/nerdtree-git-plugin')
+    call dein#add('flazz/vim-colorschemes')
     " clang
     call dein#add('zchee/deoplete-clang')
     " typescript
@@ -78,7 +86,7 @@ set autoindent
 set wildmenu
 
 " Auto chdir
-"set autochdir
+set autochdir
 " Auto refresh
 set autoread
 
@@ -116,6 +124,10 @@ let NERDTreeShowHidden=1
 
 " deoplete
 let g:deoplete#enable_at_startup=1
+
+" gruvbox
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 
 " ale
 let g:ale_completion_enabled=1
