@@ -39,17 +39,24 @@ if dein#load_state('~/.cache/dein')
     call dein#add('airblade/vim-gitgutter')
     call dein#add('Xuyuanp/nerdtree-git-plugin')
     call dein#add('flazz/vim-colorschemes')
+    call dein#add('xolox/vim-misc')
+    call dein#add('xolox/vim-session')
+
     " clang
     call dein#add('zchee/deoplete-clang')
+
+    " javascript
+    call dein#add('carlitux/deoplete-ternjs')
+
+    " python
+    call dein#add('zchee/deoplete-jedi')
+
+    " php
+    call dein#add('lvht/phpcd.vim')
+
     " typescript
     call dein#add('HerringtonDarkholme/yats.vim')
     call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
-    " javascript
-    call dein#add('carlitux/deoplete-ternjs')
-    " python
-    call dein#add('zchee/deoplete-jedi')
-    " php
-    call dein#add('lvht/phpcd.vim')
 
     " You can specify revision/branch/tag.
     "call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
@@ -119,6 +126,11 @@ set foldlevelstart=99
 " use system clipboard
 set clipboard=unnamedplus " or set clipboard=unnamed
 
+" do not store global and local values in a session
+set ssop-=options
+" do not store folds in a session
+set ssop-=folds
+
 " show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
@@ -141,3 +153,6 @@ let g:ale_fixers={
             \}
 let g:ale_sign_column_always=1
 let g:airline#extensions#ale#enabled=1
+
+" chiml is yaml
+au BufWinEnter,BufRead,BufNewFile *.chiml set filetype=yaml
