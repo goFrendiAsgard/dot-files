@@ -158,5 +158,8 @@ let g:airline#extensions#ale#enabled=1
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 
+" ctrlp show hidden
+let g:ctrlp_show_hidden = 1
+
 " chiml is yaml
 au BufWinEnter,BufRead,BufNewFile *.chiml set filetype=yaml
