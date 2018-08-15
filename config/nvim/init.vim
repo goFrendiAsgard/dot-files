@@ -154,5 +154,9 @@ let g:ale_fixers={
 let g:ale_sign_column_always=1
 let g:airline#extensions#ale#enabled=1
 
+" session
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+
 " chiml is yaml
 au BufWinEnter,BufRead,BufNewFile *.chiml set filetype=yaml
