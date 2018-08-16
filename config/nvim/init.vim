@@ -41,6 +41,8 @@ if dein#load_state('~/.cache/dein')
     call dein#add('flazz/vim-colorschemes')
     call dein#add('xolox/vim-misc')
     call dein#add('xolox/vim-session')
+    call dein#add('justincampbell/vim-eighties')
+    call dein#add('skwp/greplace.vim')
 
     " clang
     call dein#add('zchee/deoplete-clang')
@@ -153,6 +155,7 @@ let g:ale_fixers={
             \}
 let g:ale_sign_column_always=1
 let g:airline#extensions#ale#enabled=1
+let g:ale_open_list = 1
 
 " session
 let g:session_autoload = "no"
