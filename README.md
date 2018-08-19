@@ -30,17 +30,11 @@ sudo apt-get install tmux
 ## Install gogh
 
 ```
-wget -O xt  http://git.io/vGz67 && chmod +x xt && ./xt && rm xt
+wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
 ```
 
 * Choose `gruvbox` & `gruvbox dark`.
 * The themes are now available as gnome profile
-
-## Install spacevim
-
-```
-curl -sLf https://spacevim.org/install.sh | bash
-```
 
 ## Install tmux plugin manager
 
@@ -53,7 +47,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ## Install tmux plugin
 
 * Open tmux (type `tmux` on your gnome terminal)
-* Press ctrl + b + i
+* Press ctrl + b + I
 
 
 ## Copy `bashrc` to `~/.bashrc`
@@ -64,7 +58,7 @@ Or no. Actually you only need to add `set -o vi` at the of your `~/.bashrc`
 
 # Tmux Shortcuts
 
-* `ctrl`+`b`+`i` : Install tmux plugins
+* `ctrl`+`b`+`I` : Install tmux plugins
 * `ctrl`+`b`+`%` : Split screen horizontally
 * `ctrl`+`b`+`"` : Split screen vertically
 * `ctrl`+`b`+`c` : Create new window
