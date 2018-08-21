@@ -32,7 +32,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('Shougo/deoplete.nvim')
     call dein#add('Shougo/denite.nvim')
     call dein#add('Yggdroot/indentLine')
-    call dein#add('jistr/vim-nerdtree-tabs')
+    "call dein#add('jistr/vim-nerdtree-tabs')
     call dein#add('Townk/vim-autoclose')
     call dein#add('ervandew/supertab')
     call dein#add('vim-airline/vim-airline-themes')
@@ -43,6 +43,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('xolox/vim-session')
     call dein#add('justincampbell/vim-eighties')
     call dein#add('skwp/greplace.vim')
+    call dein#add('bling/vim-bufferline')
 
     " clang
     call dein#add('zchee/deoplete-clang')
@@ -95,7 +96,7 @@ set autoindent
 set wildmenu
 
 " Auto chdir
-set autochdir
+" set autochdir
 " Auto refresh
 set autoread
 
@@ -155,7 +156,7 @@ let g:ale_fixers={
             \}
 let g:ale_sign_column_always=1
 let g:airline#extensions#ale#enabled=1
-let g:ale_open_list = 1
+"let g:ale_open_list = 1
 
 " session
 let g:session_autoload = "no"
@@ -166,3 +167,4 @@ let g:ctrlp_show_hidden = 1
 
 " chiml is yaml
 au BufWinEnter,BufRead,BufNewFile *.chiml set filetype=yaml
+
