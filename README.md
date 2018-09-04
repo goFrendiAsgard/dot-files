@@ -44,6 +44,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## Copy `tmux.conf` to `~/.tmux.conf`
 
+## Copy `rmux.sh` to `~/.rmux.sh`
+
 ## Install tmux plugin
 
 * Open tmux (type `tmux` on your gnome terminal)
@@ -53,8 +55,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ## Copy `bashrc` to `~/.bashrc`
 
 Or no. Actually you only need to add `set -o vi` at the of your `~/.bashrc`
-
-## Copy `SpaceVim.d` to `~/.SpaceVim.d`
 
 # Tmux Shortcuts
 
@@ -99,12 +99,16 @@ Or no. Actually you only need to add `set -o vi` at the of your `~/.bashrc`
 ## Insert mode
 * `esc` : Change to normal mode
 
+## rmux (restore tmux)
+* `rmux`
+
 # Bonus: Interesting sofwares
 
 * sc : spreadsheet
 * cmus : music player (with playlist)
 * w3m : web browser
 * youtube-dl : youtube downloader
+* espeak: say something in English
 
 # Bonus: Install almost everything at once:
 

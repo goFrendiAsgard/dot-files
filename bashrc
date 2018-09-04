@@ -118,3 +118,6 @@ fi
 
 # vi mode
 set -o vi
+
+# rmux (aku tanpamu butiran debu)
+alias rmux=~/rmux.sh
