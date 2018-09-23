@@ -114,27 +114,15 @@ Or no. Actually you only need to add `set -o vi` at the of your `~/.bashrc`
 
 ```bash
 sudo apt-get update
-sudo apt-get install apache2 php php-dev php-mysql php-zip php-curl php-msgpack composer mysql-common mysql-server phpmyadmin python-numpy python-matplotlib openjdk-9-jdk openjdk-9-jre netbeans lazarus gimp inkscape python-setuptools python-pip python-pygame python-opengl python-dev build-essential nmap wireshark lynx tree lyx filezilla gparted unetbootin bind9 curl aircrack-ng reaver tmux cmus w3m sc vlc ghc ruby blender stellarium postgresql phppgadmin synaptic libapache2-mod-php cython ipython openshot php-xdebug preload vim vim-gtk zeal gradle golang rustc pandoc postgresql-server-dev-all wesnoth dia arduino tor netbeans mongodb cheese ipython ipython3 0ad g++ mesa-common-dev freeglut3-dev mesa-utils virtualbox jupyter-core brasero python-software-properties ubuntu-restricted-extras docker docker-compose gnome-tweak-tool shutter nodejs npm lua5.3 htop traceroute whois neovim ruby-dev youtube-dl uncrustify llvm clang appcalc cowsay audacity
-sudo pip install --upgrade pip
+sudo aptitude install git php php-dev php-msgpack composer python python-dev python3 python3-dev jupyter jupyter-notebook torbrowser-launcher youtube-dl neovim ruby ruby-dev nodejs nodejs-dev docker.io docker-compose build-essential nmap wireshark lynx tree lyx filezilla gparted curl aircrack-ng reaver nmap wireshark tmux cmus w3m sc stellarium freeglut3-dev traceroute whois clang llvm cowsay dia gimp lazarus inkscape mysql-workbench g++ mesa-common-dev mesa-utils virtualbox ipython ipython3 texlive-full pandoc 0ad stellarium wesnoth arduino cheese steam golang rustc npm htop python-pip python-setuptools python3-pip python3-pandas python3-seaborn python3-numpy python3-sklearn python3-setuptools python3-matplotlib python3-nltk
 sudo pip install --upgrade jedi
-sudo pip install --upgrade jupyter
-sudo pip install --upgrade ipython
-sudo pip install --upgrade matplotlib
-sudo pip install --upgrade cython
-sudo pip install --upgrade scikit-learn
-sudo pip install --upgrade simpy
-sudo pip install --upgrade sympy
-sudo pip install --upgrade kivy
 sudo pip install --upgrade neovim
-sudo pip install --upgrade flake8
-sudo pip install --upgrade yapf
-sudo pip install --upgrade autoflake
-sudo pip install --upgrade isort
 sudo pip3 install --upgrade neovim
-sudo ln -s "$(which nodejs)" /usr/bin/node
+sudo gem install neovim
 sudo npm install -g ionic
 sudo npm install -g cordova
 sudo npm install -g typescript
+sudo npm install -g tslint
 sudo npm install -g sqlite
 sudo npm install -g eslint
 sudo npm install -g standard
@@ -148,4 +136,23 @@ sudo snap install spotify
 sudo snap install telegram-desktop
 sudo snap install obs-studio
 sudo modprobe vboxdrv
+```
+
+# Bonus: VSCode
+```
+{
+    "terminal.integrated.fontFamily": "'ubuntu mono'",
+    "editor.fontFamily": "'ubuntu mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "window.titleBarStyle": "custom",
+    "workbench.statusBar.feedback.visible": false,
+    "editor.minimap.enabled": false,
+    "keyboard.dispatch": "keyCode",
+    "workbench.colorTheme": "ƒ - Gruvbox",
+    "vim.useSystemClipboard": true,
+    "terminal.integrated.rendererType": "dom",
+    "breadcrumbs.enabled": true,
+    "editor.stablePeek": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false
+}
 ```
