@@ -26,8 +26,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('christoomey/vim-tmux-navigator')
     call dein#add('ctrlpvim/ctrlp.vim')
     call dein#add('vim-airline/vim-airline')
-    call dein#add('airblade/vim-gitgutter')
-    call dein#add('morhetz/gruvbox')
+    " call dein#add('morhetz/gruvbox')
     call dein#add('w0rp/ale')
     call dein#add('Shougo/deoplete.nvim')
     call dein#add('Shougo/denite.nvim')
@@ -41,9 +40,12 @@ if dein#load_state('~/.cache/dein')
     call dein#add('flazz/vim-colorschemes')
     call dein#add('xolox/vim-misc')
     call dein#add('xolox/vim-session')
-    call dein#add('justincampbell/vim-eighties')
+    "call dein#add('justincampbell/vim-eighties')
     call dein#add('skwp/greplace.vim')
     call dein#add('bling/vim-bufferline')
+    call dein#add('zivyangll/git-blame.vim')
+    call dein#add('tpope/vim-fugitive')
+    call dein#add('christoomey/vim-conflicted')
 
     " clang
     call dein#add('zchee/deoplete-clang')
@@ -59,6 +61,8 @@ if dein#load_state('~/.cache/dein')
 
     " typescript
     call dein#add('HerringtonDarkholme/yats.vim')
+    "call dein#add('Quramy/tsuquyomi')
+    "call dein#add('leafgarland/typescript-vim')
     call dein#add('mhartington/nvim-typescript', {'build': './install.sh'})
 
     " You can specify revision/branch/tag.
@@ -121,6 +125,17 @@ hi normal ctermbg=None
 
 " Always show vim-airline
 set laststatus=2
+let g:airline_section_c='%-3n%f'
+let g:airline#extensions#ale#enabled=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter='unique_tail_improved'
+let g:airline_theme='base16'
+
+" Always show gutter
+set signcolumn=yes
 
 " fold
 set foldmethod=indent
@@ -139,6 +154,8 @@ let NERDTreeShowHidden=1
 
 " deoplete
 let g:deoplete#enable_at_startup=1
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['phpcd', 'omni']
 
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
@@ -148,15 +165,14 @@ let g:gruvbox_contrast_light='hard'
 let g:ale_completion_enabled=1
 let g:ale_linters={
             \   'javascript': ['eslint'],
-            \   'typescript': ['tslint'],
+            \   'typescript': ['eslint', 'tslint'],
             \}
 let g:ale_fixers={
             \   'javascript': ['eslint'],
-            \   'typescript': ['tslint'],
+            \   'typescript': ['eslint', 'tslint'],
             \}
 let g:ale_sign_column_always=1
-let g:airline#extensions#ale#enabled=1
-"let g:ale_open_list = 1
+let g:ale_open_list = 1
 
 " session
 let g:session_autoload = "no"
@@ -164,7 +180,11 @@ let g:session_autosave = "no"
 
 " ctrlp show hidden
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " chiml is yaml
 au BufWinEnter,BufRead,BufNewFile *.chiml set filetype=yaml
+
+" sjs is js
+au BufWinEnter,BufRead,BufNewFile *.sjs set filetype=javascript
 
