@@ -25,6 +25,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('scrooloose/nerdcommenter')
     call dein#add('christoomey/vim-tmux-navigator')
     call dein#add('ctrlpvim/ctrlp.vim')
+    call dein#add('rking/ag.vim')
     call dein#add('vim-airline/vim-airline')
     " call dein#add('morhetz/gruvbox')
     call dein#add('w0rp/ale')
@@ -181,6 +182,10 @@ let g:session_autosave = "no"
 " ctrlp show hidden
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+if executable('ag')
+  let g:ctrlp_use_caching=0
+  let g:ctrlp_user_command='ag %s -i --nocolor --nogroup -g ""'
+endif
 
 " chiml is yaml
 au BufWinEnter,BufRead,BufNewFile *.chiml set filetype=yaml

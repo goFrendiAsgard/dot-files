@@ -114,7 +114,9 @@ Or no. Actually you only need to add `set -o vi` at the of your `~/.bashrc`
 
 ```bash
 sudo apt-get update
-sudo aptitude install git php php-dev php-msgpack composer python python-dev python3 python3-dev jupyter jupyter-notebook torbrowser-launcher youtube-dl neovim ruby ruby-dev nodejs nodejs-dev docker.io docker-compose build-essential nmap wireshark lynx tree lyx filezilla gparted curl aircrack-ng reaver nmap wireshark tmux cmus w3m sc stellarium freeglut3-dev traceroute whois clang llvm cowsay dia gimp lazarus inkscape mysql-workbench g++ mesa-common-dev mesa-utils virtualbox ipython ipython3 texlive-full pandoc 0ad stellarium wesnoth arduino cheese steam golang rustc npm htop python-pip python-setuptools python3-pip python3-pandas python3-seaborn python3-numpy python3-sklearn python3-setuptools python3-matplotlib python3-nltk
+sudo apt-get install aptitude
+sudo aptitude install git php php-dev php-msgpack composer python python-dev python3 python3-dev jupyter jupyter-notebook torbrowser-launcher youtube-dl neovim ruby ruby-dev nodejs nodejs-dev docker.io docker-compose build-essential nmap wireshark lynx tree lyx filezilla gparted curl aircrack-ng reaver nmap wireshark tmux cmus w3m sc stellarium freeglut3-dev traceroute whois clang llvm cowsay dia gimp lazarus inkscape mysql-workbench g++ mesa-common-dev mesa-utils virtualbox ipython ipython3 texlive-full pandoc 0ad stellarium wesnoth arduino cheese steam golang rustc npm htop python-pip python-setuptools python3-pip python3-pandas python3-seaborn python3-numpy python3-sklearn python3-setuptools python3-matplotlib python3-nltk  telegram-desktop obs-studio mysql-client rustc silversearcher-ag
+sudo apt-get install spotify-client
 sudo pip install --upgrade jedi
 sudo pip install --upgrade neovim
 sudo pip3 install --upgrade neovim
@@ -127,14 +129,12 @@ sudo npm install -g sqlite
 sudo npm install -g eslint
 sudo npm install -g standard
 sudo npm install -g neovim
+sudo npm install -g nodemon
 sudo npm install -g import-js
 sudo npm install -g vscode-html-languageserver-bin
 sudo npm install -g remark
 sudo npm install -g remark-cli
 sudo npm install -g remark-stringify
-sudo snap install spotify
-sudo snap install telegram-desktop
-sudo snap install obs-studio
 sudo modprobe vboxdrv
 ```
 
