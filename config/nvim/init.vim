@@ -51,6 +51,10 @@ if dein#load_state('~/.cache/dein')
     " clang
     call dein#add('zchee/deoplete-clang')
 
+    " golang
+    call dein#add('mdempsky/gocode')
+    call dein#add('zchee/deoplete-go', {'build': 'make'})
+
     " javascript
     call dein#add('carlitux/deoplete-ternjs')
 
